@@ -1,0 +1,25 @@
+/* src/components/Transactions/TransactionList.css */
+.transactions-list {
+    max-width: 800px;
+    margin: 50px auto;
+  }
+  
+  .transaction-item {
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .transaction-item span {
+    font-size: 16px;
+  }
+  
+  .transaction-item button {
+    background-color: red;
+  }
+  
