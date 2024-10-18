@@ -1,0 +1,6 @@
+Flask
+pycryptodome
+boto3
+Pillow
+opencv-python  # For visual cryptographypython app.py
+cryptography

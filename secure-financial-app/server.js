@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const axios = require('axios');
+const bodyParser = require('body-parser');
 const { errorHandler,protect } = require('./middleware/authMiddleware'); // Ensure you have error middleware
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
@@ -10,8 +12,14 @@ const documentRoutes = require('./routes/documents');
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000' // Replace with your frontend URL
+}));
 app.use(express.json());
+
+// Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // MongoDB connection
 const mongoose = require('mongoose');
